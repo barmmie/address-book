@@ -1,0 +1,28 @@
+{% extends 'layouts/default.html.twig' %}
+
+{% block content %}
+    <h1>Add new contact</h1>
+    <form id="login-form" method="post">
+        <input type="hidden" name="_csrf_token" value="{{ _csrfToken_ }}">
+        <div class="field">
+            <label for="email">Name</label>
+            <input type="text" name="name" value="{{ _oldInput_['name'] }}"/>
+            {% for error in _formErrors_['name'] %}
+                <small class="error">{{ error }}</small>
+            {% endfor %}
+        </div>
+
+        <div class="field">
+            <label for="email">Email</label>
+            <input type="email" name="email" value="{{ _oldInput_['email'] }}"/>
+            {% for error in _formErrors_['email'] %}
+                <small class="error">{{ error }}</small>
+            {% endfor %}
+        </div>
+
+
+        <div class="actions">
+            <input type="submit" value="Save" />
+        </div>
+    </form>
+{% endblock %}

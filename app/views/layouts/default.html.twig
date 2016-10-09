@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{% block title %} Address book app{% endblock %}</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    </head>
+    <body>
+
+    <body>
+      <header>
+        <h1>Acme address book app</h1>
+        <p>Simple. Easy. Convenient. </p>
+      </header>
+      <main>
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/list">List</a></li>
+            <li><a href="/add">Add</a></li>
+          </ul>
+        </nav>
+        <article>
+            {% for error in _errors_ %}
+                <p class="error">{{ error }}</p>
+            {% endfor %}
+            {% for info in _infos_ %}
+                <p class="info">{{ info }}</p>
+            {% endfor %}
+
+
+          {% block content %}Welcome to address book app{% endblock %}
+        </article>
+      </main>
+    </body>
+
+    </body>
+</html>

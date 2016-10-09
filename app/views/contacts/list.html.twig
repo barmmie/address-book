@@ -1,0 +1,10 @@
+{% extends 'layouts/default.html.twig' %}
+
+{% block content %}
+    <h1>Listing all contact</h1>
+    {% for contact in contacts %}
+        <li>{{ contact['name'] | e }} - {{ contact['email'] | e }}</li>
+    {% else %}
+        <p>No contacts found</p>
+    {% endfor %}
+{% endblock %}

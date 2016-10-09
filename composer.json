@@ -1,0 +1,17 @@
+{
+  "name": "barmmie/addressbookapp",
+  "description": "Basic address book app php",
+  "autoload": {
+    "psr-4" : {
+      "App\\" : "app"
+    }
+  },
+  "require": {
+    "nikic/fast-route": "^1.0",
+    "league/container": "^2.2",
+    "twig/twig": "^1.26",
+    "ircmaxell/random-lib": "^1.2",
+    "vlucas/valitron": "^1.2",
+    "symfony/http-foundation": "^3.1"
+  }
+}
